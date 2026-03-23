@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"msnplusdecode/internal/msnplus"
+	"github.com/robryanx/msnplusdecode/internal/msnplus"
 )
 
 func main() {

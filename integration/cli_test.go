@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"msnplusdecode/internal/msnplus"
+	"github.com/robryanx/msnplusdecode/internal/msnplus"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
