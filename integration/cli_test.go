@@ -16,6 +16,8 @@ import (
 )
 
 func TestFindPasswordCLI(t *testing.T) {
+	t.Parallel()
+
 	rootDir := repoRoot(t)
 	tempDir := t.TempDir()
 
@@ -42,6 +44,8 @@ func TestFindPasswordCLI(t *testing.T) {
 }
 
 func TestFindPasswordCLIGeneratesSample(t *testing.T) {
+	t.Parallel()
+
 	rootDir := repoRoot(t)
 	samplePath := filepath.Join(rootDir, "testdata", msnplus.SamplePLEFilename)
 
@@ -67,6 +71,8 @@ func TestFindPasswordCLIGeneratesSample(t *testing.T) {
 }
 
 func TestDecodeDirCLIWritesFiles(t *testing.T) {
+	t.Parallel()
+
 	rootDir := repoRoot(t)
 	tempDir := t.TempDir()
 
@@ -100,6 +106,8 @@ func TestDecodeDirCLIWritesFiles(t *testing.T) {
 }
 
 func TestDecodeDirCLISkipsExistingFiles(t *testing.T) {
+	t.Parallel()
+
 	rootDir := repoRoot(t)
 	tempDir := t.TempDir()
 
@@ -133,6 +141,8 @@ func TestDecodeDirCLISkipsExistingFiles(t *testing.T) {
 }
 
 func TestDecodeDirCLIContinuesOnPasswordCheckFailure(t *testing.T) {
+	t.Parallel()
+
 	rootDir := repoRoot(t)
 	tempDir := t.TempDir()
 

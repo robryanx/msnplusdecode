@@ -10,6 +10,8 @@ import (
 )
 
 func TestDecryptPayloadWithSampleFixture(t *testing.T) {
+	t.Parallel()
+
 	blob, err := GenerateSampleBlob(SamplePassword)
 	require.NoError(t, err, "generate sample fixture")
 
@@ -23,6 +25,8 @@ func TestDecryptPayloadWithSampleFixture(t *testing.T) {
 }
 
 func TestFindPasswordInFileWithFixture(t *testing.T) {
+	t.Parallel()
+
 	blob, err := GenerateSampleBlob(SamplePassword)
 	require.NoError(t, err, "generate sample fixture")
 
@@ -35,6 +39,8 @@ func TestFindPasswordInFileWithFixture(t *testing.T) {
 }
 
 func TestFindPasswordInFileReturnsNotFound(t *testing.T) {
+	t.Parallel()
+
 	blob, err := GenerateSampleBlob(SamplePassword)
 	require.NoError(t, err, "generate sample fixture")
 

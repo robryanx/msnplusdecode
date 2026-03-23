@@ -12,6 +12,8 @@ import (
 )
 
 func TestDecryptDirectoryWritesDecodedFiles(t *testing.T) {
+	t.Parallel()
+
 	sampleBlob, err := GenerateSampleBlob(SamplePassword)
 	require.NoError(t, err, "generate sample fixture")
 
@@ -33,6 +35,8 @@ func TestDecryptDirectoryWritesDecodedFiles(t *testing.T) {
 }
 
 func TestDecryptDirectorySkipsExistingFiles(t *testing.T) {
+	t.Parallel()
+
 	sampleBlob, err := GenerateSampleBlob(SamplePassword)
 	require.NoError(t, err, "generate sample fixture")
 
@@ -56,6 +60,8 @@ func TestDecryptDirectorySkipsExistingFiles(t *testing.T) {
 }
 
 func TestDecryptDirectoryContinuesOnPasswordCheckFailure(t *testing.T) {
+	t.Parallel()
+
 	goodBlob, err := GenerateSampleBlob(SamplePassword)
 	require.NoError(t, err, "generate valid sample fixture")
 
